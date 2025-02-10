@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .card-destino {
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+                url('./assets/santorini_dia.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #202020;
+            padding: 20px 0;
+        }
+
+        .popup {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.904);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            z-index: 1000;
+        }
+
+        .img-title-2 {
+            background-image: url('./assets/germany-1920-x-1440-background-xgkfgjhodt4iowke.jpg');
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: calc(.25rem - 1px);
+        }
+
+        .img-title-2-container {
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-dark text-white p-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1>Mundis</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Voos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Hospedagens</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Cruzeiros</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        Conecte-se com o Mundo. Viaje com a Mundis !
+    </div>
+
+  
+    <div class="container my-5">
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="destino" class="form-label">Destino</label>
+                <select class="form-select" id="destino" required>
+                    <option selected disabled>Escolha um destino</option>
+                    <option value="1">Paris</option>
+                    <option value="2">Rio de Janeiro</option>
+                    <option value="3">Bangkok</option>
+                    <option value="4">Istambul</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="data" class="form-label">Data</label>
+                <input type="date" class="form-control" id="data" required>
+            </div>
+            <div class="col-md-4">
+                <label for="passagem" class="form-label">Passagem + Hospedagem</label>
+                <input type="number" class="form-control" id="passagem" placeholder="Quantidade de pessoas">
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Consultar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Grandes Viagens para conhecer o Mundo!</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-white">
+                    <img class="card-img" src="./assets/turquia.webp" alt="Card image">
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Istambul</h5>
+                      <p class="card-text">Turquia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card text-white">
+                            <img class="card-img" src="./assets/paris.jpg" alt="Card image">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Paris</h5>
+                              <p class="card-text">França</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card text-white">
+                            <img class="card-img" src="./assets/rio de janeiro.jpg" alt="Card image">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Rio de Janeiro</h5>
+                              <p class="card-text">Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 20px;">
+                        <div class="card text-white">
+                            <img class="card-img" src="./assets/tailandia.JPG" alt="Card image">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Bangkok</h5>
+                              <p class="card-text">Tailândia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-title-2-container" style="padding-top: 80px;">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Venha viajar conosco!</h2>
+                <p>
+                    Você já imaginou caminhar por praias de areia dourada, explorar cidades históricas e vivenciar culturas vibrantes? Chegou o momento de transformar seus sonhos em realidade! ✈️
+                    Seu destino dos sonhos aguarda por você com paisagens deslumbrantes, experiências únicas e a hospitalidade que só esse lugar pode oferecer. Seja para relaxar, se aventurar ou se conectar com a natureza, temos a viagem perfeita esperando por você.
+                    Reserve agora e comece a contar os dias para a viagem da sua vida!
+                    O que você vai encontrar:
+                    <ul>
+                        <li>Aventura: Trilhas emocionantes e paisagens de tirar o fôlego</li>
+                        <li>Cultura: História rica, gastronomia local e festas tradicionais</li>
+                        <li>Relaxamento: Praias paradisíacas e resorts de luxo</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-md-6 img-title-2">
+                
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>
+                <a style="padding: 5px;" href="#">Sobre nós</a>
+                <a style="padding: 5px;" href="#">Fale Conosco</a>
+                <a style="padding: 5px;" href="#">Redes Sociais</a>
+            </p>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <h5>Deseja receber nossas últimas ofertas?</h5>
+        <form>
+            <input type="text" class="form-control mb-2" placeholder="Nome" required>
+            <input type="email" class="form-control mb-2" placeholder="E-mail" required>
+            <button type="submit" class="btn btn-light">Cadastrar</button>
+        </form>
+        <button class="btn btn-danger mt-2" onclick="closePopup()">Fechar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById('popup').style.display = 'block';
+        }, 3000);
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
